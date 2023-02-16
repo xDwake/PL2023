@@ -51,7 +51,6 @@ def doenca_por_sexo(dict):
 
     for key in dict:    
         object = dict[key]
-        print(object)
         for entry in object:
             gender = entry.gender()
             temDoença = entry.temDoença()
@@ -62,8 +61,7 @@ def doenca_por_sexo(dict):
             elif(gender == 'F' and temDoença == '1'):
                 df += 1
 
-    print(dm)
-    print(df)
+    return dm, df
 
 
 def get_categoria(idade):
@@ -99,7 +97,7 @@ def doenca_por_faixa_etaria(dict):
         
         dict_por_categoria[key] = r
 
-    print(dict_por_categoria)    
+    return sort_dict(dict_por_categoria)    
 
 
 def get_colesterol(colesterol):
@@ -121,6 +119,13 @@ def agrupa_por_colesterol(dict):
 
     return dict_por_colesterol
 
+def sort_dict (dictionary):
+    sorted_keys = sorted(dictionary.keys())
+    sorted_dict = {key:dictionary[key] for key in sorted_keys}
+    
+    return sorted_dict
+
+
 def doenca_por_colesterol(dict):
     dict_por_colesterol = {}
     dict_por_colesterol = agrupa_por_colesterol(dict)
@@ -132,15 +137,32 @@ def doenca_por_colesterol(dict):
         
         dict_por_colesterol[key] = r
     
-    print(dict_por_colesterol)
+    return sort_dict(dict_por_colesterol)
 
+def cria_tabela_por_dicionario(dict):
+    print(f"   VALORES   |  QUANTIDADE")
+    print( "-----------------------------")
+    for key in dict:
+        n = 11 - len(str(key))
+        s = " " * (n+2)
+        print(f"{key}{s}|   {dict[key]}")
+    
+
+def cria_tabela_por_genero(tuplo):
+    print(f"   GÉNEROS   |  QUANTIDADE")
+    print( "-----------------------------")
+    print(f"      M      |      {tuplo[0]} ")
+    print(f"      F      |      {tuplo[1]} ")
 
 def main():
     dict = {}
     dict = cria_dicionario()
-    doenca_por_sexo(dict)
-    doenca_por_faixa_etaria(dict)
-    doenca_por_colesterol(dict)
+    print("\n\n\nDOENÇA POR GÉNERO\n")
+    cria_tabela_por_genero(doenca_por_sexo(dict))
+    print("\n\n\nDOENÇA POR FAIXA ETÁRIA\n")
+    cria_tabela_por_dicionario(doenca_por_faixa_etaria(dict))
+    print("\n\n\nDOENÇA POR FAIXA DE COLESTEROL\n")
+    cria_tabela_por_dicionario(doenca_por_colesterol(dict))
     
 
 if __name__ == "__main__":
