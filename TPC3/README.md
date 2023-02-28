@@ -1,7 +1,7 @@
 # TPC3: Processador de Pessoas listadas nos Róis de Confessados
 
 Construa agora um ou vários programas Python
-para  processar o texto 'processos.txt' com o intuito de
+para  processar o texto **processos.txt** com o intuito de
 calcular frequências de alguns elementos (a ideia é utilizar arrays associativos, dicionários em Python,
 para o efeito) conforme solicitado a seguir:
 
