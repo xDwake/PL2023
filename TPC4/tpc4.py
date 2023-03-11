@@ -15,9 +15,6 @@ def converter_csv_json(src: str, dest:str):
                 param_list.append(match.groupdict())
             elif match:= re.match(regex2, line):
                 param_list.append(match.groupdict())
-                
-        print(param_list)
-        print(header)
     
     for dict in param_list:
         if "notas" in dict:
