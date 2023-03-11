@@ -1,4 +1,4 @@
-#TPC4:  Ficheiros CSV com listas e funções de agregação
+# TPC4:  Ficheiros CSV com listas e funções de agregação
 
 (publicado em **2023.03.06**)
 
