@@ -1,4 +1,4 @@
-# TPC2: Somador On/Off
+# TPC2: Somador On/Off 
 
 Crie um programa em Python que tenha o seguinte comportamento:
 
