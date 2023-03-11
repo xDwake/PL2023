@@ -1,4 +1,4 @@
-# TPC1: Análise de dados: doença cardíaca
+# TPC1: Análise de dados: doença cardíaca 
 
 Descarregue o ficheiro de dados: `myheart.csv`
 Crie um programa em Python, conjunto de funções, que responda às seguintes questões:
