@@ -1,4 +1,4 @@
-# TPC3: Processador de Pessoas listadas nos Róis de Confessados
+# TPC3: Processador de Pessoas listadas nos Róis de Confessados 
 
 Construa agora um ou vários programas Python
 para  processar o texto `processos.txt` com o intuito de
